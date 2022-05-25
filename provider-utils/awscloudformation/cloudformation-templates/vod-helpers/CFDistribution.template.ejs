@@ -26,7 +26,9 @@ Resources:
       DistributionConfig:
         DefaultCacheBehavior:
           ForwardedValues:
-              QueryString: false
+              QueryString: true
+              QueryStringCacheKeys:
+                - 'response-content-disposition'
               Cookies:
                 Forward: none
               Headers:
